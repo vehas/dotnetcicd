@@ -16,9 +16,9 @@ dotnet_csproj:
 before_build:
 - ps: >-
     cd ClientApp
-    yarn install
-    yarn webpack --config webpack.config.vendor.js
-    yarn webpack
+    npm install
+    npm webpack --config webpack.config.vendor.js
+    npm webpack
     dotnet restore
 build:
   project: dotnet.csproj
